@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INST377 - Lab 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="heading">INST377 - Lab 4</h1>
+    
+    <div class="row">
+        <div class="box">
+            <form onsubmit="alertMe(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required />
+                <button type="submit">Alert Me!</button>
+            </form>
+        </div>
+    
+        <div class="box">
+        <button onclick="changeColor()">Change Color</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="box">
+        <form onsubmit="validateText(event)">
+            <label for="text">Text Tester:</label>
+            <input type="text" id="text" />
+            <button type="submit">Validate Text</button>
+        </form>
+        </div>
+
+        
+        <div class="box">
+        <button onclick="addText()">Add Text</button>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    function alertMe(event) {
+      event.preventDefault(); 
+      const name = document.getElementById('name').value;
+      alert(`Hi ${name}!`);
+    }
+
+    let isBlue = true;
+    function changeColor() {
+      if (isBlue) {
+        document.body.style.backgroundColor = 'green';
+      } else {
+        document.body.style.backgroundColor = 'blue';
+      }
+      isBlue = !isBlue;
+    }
+
+    function validateText(event) {
+      event.preventDefault(); 
+      const text = document.getElementById('text').value;
+      const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+      if (validation.test(text)) {
+        alert('Text contains special characters!');
+      } else {
+        alert('Text is valid!');
+      }
+    }
+
+    function addText() {
+      const heading = document.getElementById('heading');
+      heading.textContent += ' Add Text';
+    }
+  </script>
+
+</body>
+</html>

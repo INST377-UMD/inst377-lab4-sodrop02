@@ -1,0 +1,48 @@
+  body {
+    background-color: #a7d8e3;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .box {
+    background-color: #5c2d91;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid white;
+    width: 400px;
+  }
+  
+  .box label {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .box input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    margin-right: 10px;
+  }
+  
+  /* No button styling applied */
+  
